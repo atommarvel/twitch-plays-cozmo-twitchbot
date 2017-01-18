@@ -1,3 +1,5 @@
+# twitch-plays-cozmo-twitchbot
+
 # Setup
 ```
 npm install -g browserify
