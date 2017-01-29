@@ -31,6 +31,12 @@ function initBot(queue) {
     Bot.msg('This is where I could give tips on how to control Cozmo');
   });
 
+  // for now just queue up all !cc- messages as commands for testing purposes
+  Bot.listen('!cc-', (err, chatter) => {
+    queue.push(new Command(chatter, chatter.msg));
+  });
+
+  /*
   Bot.listenFor(inst.forward, (err, chatter) => {
     queue.push(new Command(chatter, inst.forward));
   });
@@ -42,6 +48,7 @@ function initBot(queue) {
   Bot.listenFor(inst.right, (err, chatter) => {
     queue.push(new Command(chatter, inst.right));
   });
+  */
 
   return botEmitter;
 }
