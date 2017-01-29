@@ -1,10 +1,15 @@
 const Bot = require('node-twitchbot');
-const config = require('../private/botConfig.json');
+const dotenv = require('dotenv');
 const EventEmitter = require('events');
 const inst = require('./instructions.json');
 const Command = require('../queue/Command.js');
 var botEmitter = new EventEmitter();
-
+dotenv.load();
+const config = {
+  "username": process.env.BOT_USERNAME,
+  "channel": process.env.BOT_CHANNEL,
+  "oauth": process.env.BOT_OAUTH
+}
 
 /*
 Chatter user obj example

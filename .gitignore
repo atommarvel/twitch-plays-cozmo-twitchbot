@@ -51,3 +51,6 @@ public/js/bundle.js
 
 # Ignore private folder
 private
+
+# dev environment labels
+.env
