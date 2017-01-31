@@ -12,8 +12,9 @@ function getRouter(queue) {
         res.json({
           "instruction": "!cc-none"
         });
+      } else {
+        res.json(command);
       }
-      res.json();
   });
 
   return router;
